@@ -1,6 +1,6 @@
 The Sharpening House
 
-recipe application-- recipes + nutrition (search by keyword, ingredients)
+Recipe application-- recipes + nutrition (search by keyword, ingredients)
 	--local grocery stores
 	--set up mealplans (save favorites)
 	--message us ingredients 
@@ -17,4 +17,4 @@ Minimimum Viable Product priorities(to meet requirements):
 		--send immediately (set later time is later feature)
 	--additional tech? Modal? (expand recipes to show directions)(Rmodals.js)
 		--set to recipe cards
-		--ensure additional information desplays
+		--ensure additional information displays

@@ -1,22 +1,19 @@
-# The-Sharpening-House
+# Dish Set Go
 
-The Sharpening House
+## Project Description (MVP)
+- This application will allow users to search for recipies by keyword or ingredients
+- Users will be able to view and save recipies to favorites
+- Users can have the recipies sent to them via text messages
 
-recipe application-- recipes + nutrition (search by keyword, ingredients)
-	--local grocery stores
-	--set up mealplans (save favorites)
-	--message us ingredients 
-	--use sweet alerts to guide users in the application
+## Feature Requests
+- Select the time of day to to text recipies
+
+## Technologies Used
+- Spoonacular API to get recipies
+- Twilio API to send SMS
+- Effeckt.cs to render modals
+- JQuery
+- JavaScript
+- HTML5/CSS3
+- Bootstrap
 	
-Minimimum Viable Product priorities(to meet requirements):
-	--get recipes, display on DOM (Spoonacular)
-		--api
-		--search
-		--display 
-	--send ingredients via messaging API (twillio)
-		--api
-		--a request on dom
-		--send immediately (set later time is later feature)
-	--additional tech? Modal?(expand recipes to show directions)(Rmodals.js)
-		--set to recipe cards
-		--ensure additional information desplays

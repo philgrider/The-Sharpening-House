@@ -38,7 +38,7 @@ $(document).ready(function() {
     // Redirect user to home page after user is logged in
     firebase.auth().onAuthStateChanged(function(user) { 
         if (user) {
-            window.location = "index.html";
+            // window.location = "index.html";
         } else {
             console.log('user not logged in');
         }

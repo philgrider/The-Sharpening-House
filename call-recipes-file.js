@@ -6,5 +6,6 @@ $.getJSON( queryURL, function( response ) {
   console.log('Recipes',response);
   recipes = response;
 });
+
 return recipes;
 };

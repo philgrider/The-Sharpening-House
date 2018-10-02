@@ -11,11 +11,14 @@
     <!-- bootstrap Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="./call-recipies.js"></script>
-    <script src="./call-recipie.js"></script>
+    <script src="./call-recipes-file.js"></script>
+    <script src="./call-recipe-file.js"></script>
     <script>
-        getRecipies('chicken');
-        getRecipie('35120');
+      var chickenRecipes =  getRecipes('chicken');
+      var recipieTest =  getRecipe('35120');
+
+    console.log('Chicken Recipies', chickenRecipes);
+    console.log('recipie', recipieTest);
     </script>
 </body>
 </html>

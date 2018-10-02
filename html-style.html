@@ -1,0 +1,122 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dish Set Go</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">   
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+</head>
+<body>
+    <!--header-->
+    <div class="jumbotron jumbotron-fluid bg-success" id="project-name">
+        <div class="container text-center">
+            <h1 class="display-4 font-weight-bold text-white">Dish Set Go</h1>
+            <p class="lead">Find recipe, Cook it and Enjoy!</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <!--search & display area-->
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!--home page display search form & random result button-->
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="container">
+                            
+                            <!--search input and random recipe button-->
+                            <div class="card border-success mb-3">
+                                <div class="card-header" id="search-fields">
+                                    <form class="form-inline">
+                                        <input class="form-control mr-sm-2 border-success" type="search" placeholder="Search" aria-label="Search">
+                                            <button class="btn btn-outline-success my-2 my-sm-0 mr-2 font-weight-bold" type="submit">Search</button>
+                                            <button class="btn btn-outline-success my-2 my-sm-0 font-weight-bold" type="submit">Surprise Me</button>                                        
+                                    </form>
+                                </div>
+                                
+                                <!--search result display-->
+                                <div class="card-body text-success">
+                                    
+                                    <h5 class="card-title font-weight-bold">Recipe for you</h5>
+                                        
+                                        <!--search result recipe card -->
+                                        <div class="card" id="result-recipe-card">   
+                                            <div class="body">      
+        
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--favorite recipe display-->
+                    <div class="tab-pane fade" id="v-pills-favorite" role="tabpanel" aria-labelledby="v-pills-favorite-tab">
+
+                        <div class="card border-success mb-3">
+                            <div class="card-header bg-success text-white font-weight-bold">My Favorite</div>
+                                <div class="card-body text-success">
+                                    
+                                    <!--favorite recipe card -->
+                                    <div class="card" id="favorite-recipe-card">   
+                                        <div class="body">      
+            
+                                        </div>
+                                    </div>
+
+                                </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-pricing" role="tabpanel" aria-labelledby="v-pills-pricing-tab">...</div>
+
+                    <!--login / signup display-->
+                    <div class="tab-pane fade" id="v-pills-Login" role="tabpanel" aria-labelledby="v-pills-Login-tab">
+                            <div class="card border-success mb-3">
+                                    <div class="card-header bg-success text-white font-weight-bold">Login</div>
+                                    <div class="card-body text-success">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="email-input font-weight-bold">Email address</label>
+                                                <input type="email" class="form-control border-success" id="user-email" aria-describedby="emailHelp" placeholder="Enter email">
+                                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password-input font-weight-bold">Password</label>
+                                                <input type="password" class="form-control border-success" id="password" placeholder="Password">
+                                            </div>
+                                                <button type="submit" class="btn btn-success font-weight-bold">Submit</button>
+                                        </form>
+                                    </div>
+                                  </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <!--nav-->
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active bg-success text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>                                        
+                    <a class="nav-link bg-success text-white" id="v-pills-favorite-tab" data-toggle="pill" href="#v-pills-favorite" role="tab" aria-controls="v-pills-favorite" aria-selected="false">Favorite</a>
+                    <a class="nav-link bg-success text-white" id="v-pills-pricing-tab" data-toggle="pill" href="#v-pills-pricing" role="tab" aria-controls="v-pills-pricing" aria-selected="false">Pricing</a>
+                    <a class="nav-link bg-success text-white" id="v-pills-Login-tab" data-toggle="pill" href="#v-pills-Login" role="tab" aria-controls="v-pills-Login" aria-selected="false">Login</a>                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!--javascript-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./assets/javascript/config.js"></script>
+    <script src="./assets/javascript/login.js"></script>
+    <script src="./assets/javascript/signup.js"></script>    
+</body>
+</html>

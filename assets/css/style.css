@@ -1,0 +1,16 @@
+body {
+    background-image: url("../images/dinner-dish-egg-54455_bg.jpg");
+    background-size:100% 100%;
+}
+
+#project-name {
+    font-family: 'Bungee Inline', cursive;
+}
+
+.container {
+    font-size: 20px;
+}
+
+#search-fields {
+    margin: auto;
+}

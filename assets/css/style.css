@@ -14,3 +14,15 @@ body {
 #search-fields {
     margin: auto;
 }
+
+@media screen and (max-width: 640px) {
+
+    #search-input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #random-result-btn {
+        width: 285px;
+    }
+}

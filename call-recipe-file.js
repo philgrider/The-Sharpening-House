@@ -1,10 +1,15 @@
-function getRecipe(recipieID) {
+function getRecipe(recipieID, callback) {
 
 var queryURL = "./First-Recipe.JSON";
-var recipe;
-$.getJSON( queryURL, function(response) {
-  console.log('Recipe',response);
-  recipe = response; 
+
+$.getJSON( queryURL, function ( response ) {
+  // console.log('type of response', typeof response);
+  // console.log('Recipe',JSON.stringify(response));
+
+  if (typeof response === 'string') {
+    response = JSON.parse(response);
+  }
+
+  callback(response);
 });
-return recipe;
 };

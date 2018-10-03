@@ -1,11 +1,16 @@
-function getRecipes(foodCatagory) {
+function getRecipes(foodCatagory, callback) {
 
-var queryURL = "/Users/phillipgrider 1 2/Desktop/Bootcamp/The-Sharpening-House/chicken.JSON";
-var recipes;
-$.getJSON( queryURL, function( response ) {
-  console.log('Recipes',response);
-  recipes = response;
-});
+  var queryURL = "./chicken.JSON";
 
-return recipes;
+  $.getJSON( queryURL, function ( response ) {
+    // console.log('type of response', typeof response);
+    // console.log('Recipes',JSON.stringify(response));
+
+    if (typeof response === 'string') {
+      response = JSON.parse(response);
+    }
+
+    callback(response);
+  });
+
 };

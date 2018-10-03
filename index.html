@@ -14,11 +14,31 @@
     <script src="./call-recipes-file.js"></script>
     <script src="./call-recipe-file.js"></script>
     <script>
-      var chickenRecipes =  getRecipes('chicken');
-      var recipieTest =  getRecipe('35120');
+      // var chickenRecipes =  getRecipes('chicken');
+      // var recipieTest =  getRecipe('35120');
+    //   function getRecipes (recipeName, callbackFn) {
+    //       $.ajax('my-url.com/api', function (recipeData) {
+    //           if (typeof callbackFn === 'function') {
+    //               callbackFn(recipeData);
+    //           }
+    //       });
+    //   }
 
-    console.log('Chicken Recipies', chickenRecipes);
-    console.log('recipie', recipieTest);
+      function updateDOM (recipes) {
+        console.log('Chicken Recipies', (recipes));
+          // recipes = the JSON you returned in call-recipe.js
+      }
+      function updateDOM2 (recipe) {
+         console.log('recipie', (recipe));
+          // recipes = the JSON you returned in call-recipe.js
+      }
+
+
+      getRecipes('chicken', updateDOM);
+      getRecipe('35120', updateDOM2);
+
+    
+   
     </script>
 </body>
 </html>

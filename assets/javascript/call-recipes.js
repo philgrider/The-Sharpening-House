@@ -12,9 +12,9 @@ function getRecipes(foodCatagory, callback) {
   });
 
 };
-function getRecipe(recipieID, callback) {
+function getRecipe(recipeID, callback) {
 
-  var queryURL = "https://www.food2fork.com/api/get?key=890f6487752c619e7b9ad1ca807eeff8&rId=" + recipieID;
+  var queryURL = "https://www.food2fork.com/api/get?key=890f6487752c619e7b9ad1ca807eeff8&rId=" + recipeID;
 
   $.ajax({
     url: queryURL,

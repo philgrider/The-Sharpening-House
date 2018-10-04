@@ -6,18 +6,70 @@
     <title>Dish Set Go</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">   
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
 <body>
-    <!--header-->
+    <!-- header -->
     <div class="jumbotron jumbotron-fluid" id="project-name">
-        <div class="container text-center">
-            <h1 class="display-4 font-weight-bold">Dish Set Go</h1>
-            <p class="lead mb-5">Find recipe, Cook it and Enjoy!</p>
-        </div>
-    </div>
+        <div class="wrapper" id="navigation-tools">
+            <!--Navbar--> 
+            <nav class="navbar" id="navigation-buttons">
 
+                <!-- hamburger nav button -->
+                <button class="navbar-toggler" type="button" id="hamburger" data-toggle="collapse" data-target="#page-links" aria-controls="#page-links"
+                aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars fa-1x"></i></button>
+
+                <!-- login/logout (to be added later-->
+                <!-- <button type="button" class="navbar-toggler" id = "login-cog" data-toggle="collapse" data-target="#login-logout" aria-controls="#login-logout" aria-expanded="false" aria-label="toggle sign in">
+                        <i class="fas fa-cog"></i>
+                </button> -->
+
+            </nav>
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="page-links">
+
+                <!-- Links -->
+                <ul class="list-unstyled components">
+                    <li class="active" id="home-link">
+                        <a href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="login-display">Favorites</a>
+                    </li>
+                    <li>
+                        <a href="#" class="login-display">Account Settings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="logout-display">login</a>
+                    </li>
+                    <li>
+                        <a href="#" class="login-display">logout</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!--Sign in/ Out toggle (for later user-->
+            <!-- <div class="collapse navbar-collapse" id="login-logout">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active" id="signin-option" display="none">sign-in</li>
+                    <li class="nav-item active" id="signout-option" display="none">sign-out</li>                
+                </ul>
+            </div> -->
+
+        </div>
+
+        <!-- Header Text -->
+        <div class="container text-center">    
+            <h1 class="display-4 font-weight-bold">Dish Set Go</h1>
+
+        </div>
+    </div> 
+
+
+    <!--Page Content-->
     <div class="container">
         <div class="row">
 
@@ -42,7 +94,7 @@
                                 <!--search result display-->
                                 <div class="card-body text-warning">
                                     
-                                    <h5 class="card-title font-weight-bold">Recipe for you</h5>
+                                    <h5 class="card-title font-weight-bold">Featured Dish</h5>
                                         
                                         <!--search result recipe card -->
                                         <div class="card" id="result-recipe-card">   
@@ -92,23 +144,16 @@
                                                 <button type="submit" class="btn my-2 my-sm-0 font-weight-bold custom-border" id="login-btn">Submit</button>
                                         </form>
                                     </div>
-                                  </div>
-                    </div>                    
-                </div>
-            </div>
+                            </div>
 
-            <!--nav-->
-            <div class="col-3">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active text-white custom-bg" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>                                        
-                    <a class="nav-link text-white custom-bg" id="v-pills-favorite-tab" data-toggle="pill" href="#v-pills-favorite" role="tab" aria-controls="v-pills-favorite" aria-selected="false">Favorite</a>
-                    <a class="nav-link text-white custom-bg" id="v-pills-pricing-tab" data-toggle="pill" href="#v-pills-pricing" role="tab" aria-controls="v-pills-pricing" aria-selected="false">Pricing</a>
-                    <a class="nav-link text-white custom-bg" id="v-pills-Login-tab" data-toggle="pill" href="#v-pills-Login" role="tab" aria-controls="v-pills-Login" aria-selected="false">Login</a>                    
+                            
+                    </div>                    
                 </div>
             </div>
 
         </div>
     </div>
+
     
     <!--javascript-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -117,6 +162,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./assets/javascript/config.js"></script>
     <script src="./assets/javascript/login.js"></script>
-    <script src="./assets/javascript/signup.js"></script>    
+    <script src="./assets/javascript/signup.js"></script>
 </body>
 </html>

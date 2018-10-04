@@ -6,6 +6,15 @@
     background-size:100% 100%;
 }*/
 
+#navigation-buttons{
+    width: 100%;
+    margin-top: -65px;
+}
+
+#page-links{
+    max-width: 50%;
+}
+
 #project-name {
     font-family: 'Bungee Inline', cursive;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/dinner-dish-egg-54455_bg.jpg");
@@ -38,6 +47,20 @@
     background-color: orangered;
 }
 
+#hamburger,
+#login-cog{
+    background-color: orangered;
+}
+
+.login-display{
+    display:none;
+}
+
+/* #login-logout{
+    position: relative;
+    text-align: right;
+} */
+
 #search-input-btn:hover,
 #random-result-btn:hover,
 #login-btn:hover {
@@ -58,6 +81,11 @@ h5,
     color: orangered;
 }
 
+a:hover{
+    color: orangered;
+    font-weight: bolder;
+}
+
 .nav-pills .nav-link.active {
     background-color: rgba(252, 61, 4, 0.87);
 }
@@ -73,3 +101,4 @@ h5,
         width: 285px;
     }
 }
+

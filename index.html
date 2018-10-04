@@ -68,10 +68,10 @@
 
     <!--Page Content-->
     <div class="container">
-        <div class="row">
+        <div class="container">
 
             <!--search & display area-->
-            <div class="col-9">
+            <div class="container col-9">
                 <div class="tab-content" id="v-pills-tabContent">
 
                     <!--home page display search form & random result button-->
@@ -89,10 +89,9 @@
                                 </div>
                                 
                                 <!--search result display-->
-                                <div class="card-body text-warning">
-                                    
-                                    <h5 class="card-title font-weight-bold">Featured Dish</h5>
-                                        
+                                <!-- <div class="card-body text-warning"> -->
+                                    <div class="card-body text-warning mx-auto md-auto" id="recipe-query-results">
+                                    </div>   
                                         <!--search result recipe card -->
                                         <div class="card" id="result-recipe-card">   
                                             <div class="body">      
@@ -151,7 +150,8 @@
         </div>
     </div>
 
-    
+    <!-- FIrebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
     <!--javascript-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -160,5 +160,7 @@
     <script src="./assets/javascript/config.js"></script>
     <script src="./assets/javascript/login.js"></script>
     <script src="./assets/javascript/signup.js"></script>
+    <script src="./assets/javascript/call-recipes.js"></script>
+    <script src="./assets/javascript/queryRecipes.js"></script>
 </body>
 </html>

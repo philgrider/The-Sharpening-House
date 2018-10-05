@@ -87,6 +87,14 @@ a:hover{
     text-align:right;
     font-size: 12px;
 }
+#card-width{
+    width: 290px;
+    height: 290px;
+}
+#img-width{
+    width: 290px;
+    height: 190px;
+}
 
 #card-width{
     width: 290px;

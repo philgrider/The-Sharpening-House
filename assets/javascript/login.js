@@ -19,29 +19,20 @@ $(document).ready(function() {
         var email = $userEmail.val();
         var pass = $userPass.val();
         
-        // Log in user wih email and pass
-        firebase.auth().signInWithEmailAndPassword(email, pass).catch(function(err) {   
-
+        // Log in user wih email and pass, then redirect to index.html, or catch error
+        firebase.auth().signInWithEmailAndPassword(email, pass).then(function() {
+            window.location = "index.html";
+        }).catch(function(err) {   
             // Handle Errors here.
             var errCode = err.code;
             var errMessage = err.message;
             console.log(errCode);
             console.log(errMessage);
-
             // Wrong email or password
             $errorMsg.text('*Incorrect email or password. Please try again.');
 
           });
 
-    });
-
-    // Redirect user to home page after user is logged in
-    firebase.auth().onAuthStateChanged(function(user) { 
-        if (user) {
-            window.location = "index.html";
-        } else {
-            console.log('user not logged in');
-        }
     });
 
 });

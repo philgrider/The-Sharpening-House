@@ -12,9 +12,10 @@
     width:auto;
     font-family: 'Bungee Inline', cursive;
     background-color: #2D2A27;
-    background-image: linear-gradient(rgba(54, 54, 54, 0.7), rgba(54, 54, 54, 0.7)), url("../images/dinner-dish-egg-54455_bg.jpg");
+    background-image: linear-gradient(rgba(54, 54, 54, 0.7), rgba(54, 54, 54, 0.7)), url("../images/veggie-dark.jpeg");
+    background-size: 120%;
+    background-position-y: 65%;
     background-position: center;
-    background-repeat: repeat-x;
     color: orangered;
 }
 
@@ -34,6 +35,10 @@ button {
 #hamburger,
 #login-cog{
     background-color: orangered;
+}
+
+#hamburger{
+    margin-top:30px;
 }
 
 .hide{
@@ -109,85 +114,19 @@ a:hover{
     }
 }
 
-@media screen and (max-width:400px){
-    #project-name{
-        width:100%;
-        background-size: 110%;
-        background-position-y: 60%;
-    }
-
+/* Responsive styling for header text */
+@media screen and (max-width:574px){
     .display-4{
         font-size:2.5rem;
-    }
-
-    #hamburger{
-        margin-top:30px;
-    }
-}
-
-@media screen and (min-width:400px){
-    #project-name{
-        width:100%;
-        background-size: 100%;
-        background-position-y: 60%;
-    }
-
-    .display-4{
-        font-size:2.5rem;
-    }
-
-    #hamburger{
-        margin-top:30px;
-    }
-}
-
-@media screen and (min-width:500px){
-    #project-name{
-        background-size: 100%;
-        background-position-y: 60%;
-    }
-
-    .display-4{
-        font-size:2.5rem;
-    }
-
-    #hamburger{
-        margin-top:30px;
     }
 }
 
 @media screen and (min-width:575px){
-    #project-name{
-        background-size: 95%;
-        background-position-y:60%;
-    }
-
     .display-4{
         font-size:3rem;
     }
 }
 
-@media screen and (min-width: 800px) {
-    #project-name{
-        background-size: 75%;
-        background-position-y: 60%;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    #project-name{
-        background-size: 70%;
-        background-position-y: 60%;
-    }
-}
-
-
-@media screen and (min-width: 1200px) {
-    #project-name{
-        background-size: 70%;
-        background-position-y: 65%;
-    }
-}
 
 
 

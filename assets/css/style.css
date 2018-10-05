@@ -65,6 +65,12 @@ h5 {
     color: orangered;
 }
 
+h4 {
+    color: orangered;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
 a:hover{
     color: orangered;
     font-weight: bolder;
@@ -83,16 +89,23 @@ a:hover{
     color: red;
 }
 
-.small-help{
-    text-align:right;
-    font-size: 12px;
+#recipe-query-results {
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
+
+
+
 #card-width{
     width: 290px;
     height: 290px;
+    border-color: orangered;
+    margin: auto;
 }
+
 #img-width{
-    width: 290px;
+    width: 288px;
     height: 190px;
 }
 

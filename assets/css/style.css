@@ -88,6 +88,15 @@ a:hover{
     font-size: 12px;
 }
 
+#card-width{
+    width: 290px;
+    height: 290px;
+}
+#img-width{
+    width: 290px;
+    height: 190px;
+}
+
 @media screen and (max-width: 640px) {
 
     #search-input {

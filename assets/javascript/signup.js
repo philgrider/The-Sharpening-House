@@ -24,20 +24,14 @@ $(document).ready(function() {
             $errorMsg.text('*Password must be at least 8 characters long!');
             $userPass.val('');
         } else {
-            firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(err) {
+            //Create user, then redirect to home page, or catch error
+            firebase.auth().createUserWithEmailAndPassword(email, pass).then(function() {
+                window.location = "index.html";
+            }).catch(function(err) {
                 console.log(err.message);
             });
         }
         
-    });
-
-    // If signed up, redirect to home page
-    firebase.auth().onAuthStateChanged(function(user) { 
-        if (user) {
-            window.location = "index.html";
-         } else {
-            console.log('user not logged in')
-        }
     });
 
 });

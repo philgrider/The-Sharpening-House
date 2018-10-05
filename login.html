@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang=en>
     <head>
@@ -6,55 +5,93 @@
         <title>Dish Set Go</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     </head>
     <body>
 
-        <!-- header -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Dish Set Go</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Favorites</a>
-                    <a class="nav-item nav-link" href="#">Pricing</a>
-                    <a class="nav-item nav-link disabled" href="#">Login</a>
-                  </div>
+
+    <!-- header -->
+    <div class="jumbotron jumbotron-fluid" id="project-name">
+            <div class="wrapper" id="navigation-tools">
+                <!--Navbar--> 
+                <nav class="navbar" id="navigation-buttons">
+    
+                    <!-- hamburger nav button -->
+                    <button class="navbar-toggler" type="button" id="hamburger" data-toggle="collapse" data-target="#page-links" aria-controls="#page-links"
+                    aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars fa-1x"></i></button>
+    
+                </nav>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="page-links">
+    
+                    <!-- Links -->
+                    <ul class="list-unstyled components">
+                        <li class="active" id="home-link">
+                            <a href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                            <a href="login.html" class="logout-display">login</a>
+                        </li>
+                        <li>
+                            <a href="signup.html" class="logout-display">sign up</a>
+                        </li>
+                        <li>
+                            <a id="logout-link" class="login-display">logout</a>
+                        </li>
+                    </ul>
+    
                 </div>
-        </nav>
+    
+            </div>
+    
+            <!-- Header Text -->
+            <div class="container text-center">    
+                <h1 class="display-4 font-weight-bold">Dish Set Go</h1>
+    
+            </div>
+        </div> 
 
         <!-- Login fields-->
         <div class="container">
-            <div class="card" id="signup-card" style="width: 28rem;">
-                <div class="card-header">
-                    <h3 class="card-title">Login</h3>
+            <div class="col-6 container">
+
+            <div class="card custom-border mb-3" id="login-card">
+                <div class="card-header custom-bg">
+                    <h3 class="card-title text-white">Login</h3>
                 </div>
 
                 <div class="card-body">
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="user-email-addon"><i class="fas fa-user"></i></span>
+                                <span class="input-group-text custom-border" id="user-email-addon"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="User Email" id="user-email">
+                            <input type="text" class="form-control custom-border" placeholder="User Email" id="user-email">
                         </div>
                     </div>            
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="password-addon"><i class="fas fa-key"></i></span>
+                                <span class="input-group-text custom-border" id="password-addon"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Password" id="password">
+                            <input type="password" class="form-control custom-border" placeholder="Password" id="password">
                         </div>
                     </div>    
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary" id="submit-login-btn">Login</button>
-                        <span id="error-message"></span>           
+                        <span>
+
+                        <button type="submit" class="btn my-2 my-sm-0 mr-2 font-weight-bold custom-border" id="submit-login-btn">Login</button>
+
+                        <a href="signup.html"><span class="small-help">Don't have an account? Sign up!</span></a>
+                        </span>            
+                        <span id="error-message"></span>
+                                   
                     </div> 
                 </div>
+            </div>
+
             </div>
         </div> 
 

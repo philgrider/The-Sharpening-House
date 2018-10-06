@@ -37,7 +37,7 @@ function updateDOM (recipes) {
         var $cardImg = $('<img>').attr({
             class: 'card-img-top',
             'src': recipeDataStore.recipes[i].image_url,
-            'alt': 'Card image cap',
+            'alt': 'Card image cp',
             'id': 'img-width'
         });
         var $cardBodyContainer = $('<div>').addClass('card-body');
@@ -50,7 +50,7 @@ function updateDOM (recipes) {
         $dropBody.append($('<div>').attr({
                     class: 'list-group',
                     'data-spy': 'scroll',
-                    'data-id': 'ingredients-area',
+                    'id': recipeDataStore.recipes[i].recipe_id,
                     'data-offset': '0'
         }));
         $ingredientsDiv.append($dropBody);
@@ -59,20 +59,29 @@ function updateDOM (recipes) {
         $cardDiv.append($cardImg, $cardBodyContainer, $recipeDrop);
         $recipesDisplay.append($cardDiv);
     }
-
-
   }
-  $('#recipe-query-results').unbind('click').on('click', '.button',function (e) {
-    e.preventDefault();
+  $('#recipe-query-results').unbind('click').on('click', '.button',function (event) {
+    event.preventDefault();
     $(this).parent().toggleClass('expand');
     $(this).parent().children().toggleClass('expand');
     var recipeId = $(this).attr('data-recipe-id');
+    var btnState = $(this).attr('class');
     console.log('This should be the Recipe ID' + recipeId);
+    console.log('this is btn state: ' + btnState);
+    if(btnState === 'button expand'){
     getRecipe(recipeId, ingredients);
-  });
-  function ingredients (recipe) {
-     console.log('recipie', (recipe));
+    }
 
-      // recipes = the JSON you returned in call-recipe.js
+  });
+  function ingredients (recipeIngredients) {
+    
+     console.log('recipie', (JSON.parse(recipeIngredients)));
+
+      // recipeIngredients = the JSON you returned in call-recipe.js
+
+      // update DOM with ingredients for this expand
+      
+     var $ingredientsDiv = $('#ingredientsUpdate');
+      
   };
 //   getRecipe('35120', updateDOM2);

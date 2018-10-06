@@ -1,8 +1,8 @@
 
 function getRecipes(foodCatagory, callback) {
-  var vitaApiKey = 'd22669e556f9e536d2d4e73b6cb07813';
-  // var philApiKey = '890f6487752c619e7b9ad1ca807eeff8';
-  var queryURL = 'https://www.food2fork.com/api/search?key=' + vitaApiKey + '&q=' + foodCatagory.toLowerCase();
+  var ApiKey = 'd22669e556f9e536d2d4e73b6cb07813';
+  //var ApiKey = '890f6487752c619e7b9ad1ca807eeff8';
+  var queryURL = 'https://www.food2fork.com/api/search?key=' + ApiKey + '&q=' + foodCatagory.toLowerCase();
 
   $.ajax({
     url: queryURL,

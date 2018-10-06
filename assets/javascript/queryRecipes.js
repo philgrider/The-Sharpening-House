@@ -41,8 +41,11 @@ function updateDOM (recipes) {
             'alt': 'Card image cp',
             'id': 'img-width'
         });
+        // Create Div for Recipe Item
         var $cardBodyContainer = $('<div>').addClass('card-body');
+        // Create a p for recipe Name
         var $pCard = $('<p>').addClass('card-text text-center').text(recipeDataStore.recipes[i].title);
+        //
         var $recipeDrop = $('<div>').addClass('drop-container');
         $recipeDrop.append($('<span>').addClass('button').attr({'id':'drop-button','data-recipe-id': recipeDataStore.recipes[i].recipe_id}).text('+'));
         var $ingredientsDiv = $('<div>').addClass('drop-content');
@@ -71,9 +74,9 @@ function updateDOM (recipes) {
     console.log('this is btn state: ' + btnState);
 
     if(btnState === 'button expand'){
-        if(Object.keys(recipeIngredientsStore).indexOf(recipeId)){
-            console.log('not found');
-            getRecipe(recipeId, ingredients); 
+        if(Object.keys(recipeIngredientsStore).indexOf(recipeId) === -1){
+            console.log('not found'); 
+            getRecipe(recipeId, ingredients);
             }else{
             console.log('found');
             };

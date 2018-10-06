@@ -1,6 +1,7 @@
 // dont forget the document ready
 // get DOM Tags
 var recipeDataStore = {};
+var recipeIngredientsStore = {};
 var $recipesDisplay = $('#recipe-query-results');
 
 $('#search-input-btn').on('click', function(event) {
@@ -68,20 +69,33 @@ function updateDOM (recipes) {
     var btnState = $(this).attr('class');
     console.log('This should be the Recipe ID' + recipeId);
     console.log('this is btn state: ' + btnState);
+
     if(btnState === 'button expand'){
-    getRecipe(recipeId, ingredients);
-    }
+        if(Object.keys(recipeIngredientsStore).indexOf(recipeId)){
+            console.log('not found');
+            getRecipe(recipeId, ingredients); 
+            }else{
+            console.log('found');
+            };
+        
+        }
 
   });
   function ingredients (recipeIngredients) {
-    
-     console.log('recipie', (JSON.parse(recipeIngredients)));
+    recipeIngredientsObject = JSON.parse(recipeIngredients);
+     console.log('recipie', recipeIngredientsObject);
+     recipeIngredientsStore[recipeIngredientsObject.recipe.recipe_id] = recipeIngredientsObject.recipe.ingredients;
+     console.log(recipeIngredientsStore);
 
       // recipeIngredients = the JSON you returned in call-recipe.js
 
       // update DOM with ingredients for this expand
-      
-     var $ingredientsDiv = $('#ingredientsUpdate');
-      
+
+     var $ingredientsDiv = $('#' + recipeIngredientsObject.recipe.recipe_id);
+     for(i = 0;i < recipeIngredientsObject.recipe.ingredients.length; i++){
+     var liIngredientItem = $('<li>').addClass('list-group-item').text(recipeIngredientsObject.recipe.ingredients[i]);
+     $ingredientsDiv.append(liIngredientItem);         
+     }
+
   };
 //   getRecipe('35120', updateDOM2);

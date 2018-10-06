@@ -64,6 +64,41 @@
             $cardDiv.append($cardImg, $cardBodyContainer, $recipeDrop);
             $recipesDisplay.append($cardDiv);
         }
+        var $cardImg = $('<img>').attr({
+            class: 'card-img-top',
+            'src': recipeDataStore.recipes[i].image_url,
+            'alt': 'Card image cp',
+            'id': 'img-width'
+        });
+        // Create Div for Recipe Item
+        var $cardBodyContainer = $('<div>').addClass('card-body');
+        // Create a p for recipe Name
+        var $pCard = $('<p>').addClass('card-text text-center').text(recipeDataStore.recipes[i].title);
+        //create "dropdown" view
+        var $recipeDrop = $('<div>').addClass('drop-container');
+        //add contents of "dropdown"
+        //toggle button
+        $recipeDrop.append($('<span>').addClass('button')
+        .attr({'id':'drop-button','data-recipe-id': recipeDataStore.recipes[i].recipe_id}).text('+'));
+        //ingredients display
+        var $ingredientsDiv = $('<div>').addClass('drop-content');
+        $ingredientsDiv.append($('<div>').addClass('drop-head').html('<h3>' + recipeDataStore.recipes[i].title + '</h3>'));
+        var $dropBody = $('<div>').addClass('drop-body');
+        $dropBody.append($('<div>').attr({
+                    class: 'list-group',
+                    'data-spy': 'scroll',
+                    'id': recipeDataStore.recipes[i].recipe_id,
+                    'data-offset': '0'
+        }));
+        var $twillioButton = $('<button>').attr('id','twillio-button');
+        $twillioButton.text('Text Me');
+
+        $dropBody.append($twillioButton);
+        $ingredientsDiv.append($dropBody);
+        $recipeDrop.append($ingredientsDiv);
+        $cardBodyContainer.append($pCard);
+        $cardDiv.append($cardImg, $cardBodyContainer, $recipeDrop);
+        $recipesDisplay.append($cardDiv);
     }
     $('#recipe-query-results').unbind('click').on('click', '.button', function (event) {
         event.preventDefault();
@@ -113,5 +148,6 @@
             $ingredientsDiv.append(liIngredientItem);
         }
 
-    };
-    //   getRecipe('35120', updateDOM2);
+  };
+//   getRecipe('35120', updateDOM2);
+

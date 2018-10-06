@@ -102,6 +102,7 @@ a:hover{
 #img-width{
     width: 290px;
     height: 190px;
+    text-align: left;
 }
 
 @media screen and (max-width: 640px) {

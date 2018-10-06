@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dish Set Go</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">   
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/dropdown.css">
+    </head>
+    <body>
+        <!-- header -->
+        <div class="jumbotron jumbotron-fluid" id="project-name">
+            <div class="wrapper" id="navigation-tools">
+                <!--Navbar--> 
+                <nav class="navbar" id="navigation-buttons">
+    
+                    <!-- hamburger nav button -->
+                    <button class="navbar-toggler" type="button" id="hamburger" data-toggle="collapse" data-target="#page-links" aria-controls="#page-links" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars fa-1x"></i></button>
+    
+                    <!-- login/logout (to be added later-->
+                    <!-- <button type="button" class="navbar-toggler" id = "login-cog" data-toggle="collapse" data-target="#login-logout" aria-controls="#login-logout" aria-expanded="false" aria-label="toggle sign in">
+                            <i class="fas fa-cog"></i>
+                    </button> -->
+    
+                </nav>
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="page-links">
+    
+                    <!-- Links -->
+                    <ul class="list-unstyled components">
+                        <li class="active" id="home-link">
+                            <a href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                            <a href="login.html" class="logout-display">login</a>
+                        </li>
+                        <li>
+                            <a href="signup.html" class="logout-display">sign up</a>
+                        </li>
+                        <li>
+                            <a id="logout-link" class="login-display">logout</a>
+                        </li>
+                    </ul>
+    
+                </div>
+    
+                <!--Sign in/ Out toggle (for later user-->
+                <!-- <div class="collapse navbar-collapse" id="login-logout">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active" id="signin-option" display="none">sign-in</li>
+                        <li class="nav-item active" id="signout-option" display="none">sign-out</li>                
+                    </ul>
+                </div> -->
+    
+            </div>
+    
+            <!-- Header Text -->
+            <div class="container text-center">    
+                <h1 class="display-4 font-weight-bold">Dish Set Go</h1>
+    
+            </div>
+        </div> 
+    
+    
+        <!--Page Content-->
+        <div class="container">
+            <div class="container">
+    
+                <!--search & display area-->
+                <div class="container col-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+    
+                        <!--home page display search form & random result button-->
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="container">
+                                
+                                <!--search input and random recipe button-->
+                                <div class="card custom-border mb-3">
+                                    <div class="card-header" id="search-fields">
+                                        <form class="form-inline">
+                                            <input class="form-control mr-sm-2 custom-border" id="search-input" type="search" placeholder="Search" aria-label="Search">
+                                                <button class="btn my-2 my-sm-0 mr-2 font-weight-bold custom-border" id="search-input-btn" type="submit">Search</button>
+                                                <button class="btn my-2 my-sm-0 font-weight-bold custom-border" id="random-result-btn" type="submit">Surprise Me</button>                                        
+                                        </form>
+                                    </div>
+                                    
+                                    <!--search result display-->
+                                    <!-- <div class="card-body text-warning"> -->
+                                        <div class="card-body text-warning mx-auto md-auto" id="recipe-query-results">
+                                            <h4 class="text-center border-bottom">Your Results!</h4>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/Bacon2BWrapped2BJalapeno2BPopper2BStuffed2BChicken2B5002B5909939b0e65.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Bacon Wrapped Jalapeno Popper Stuffed Chicken</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/Buffalo2BChicken2BChowder2B5002B0075c131caa8.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Zesty Slow Cooker Chicken Barbeque</p>
+                                                    <div class="drop-container" data-recipe="">
+                                                            <span class="button">+</span>
+                                                          <div class="drop-content ">
+                                                            <div class="drop-head">
+                                                              <h3>Zesty Slow Cooker Chicken Barbeque</h3>
+                                                            </div>
+                                                            <div class="drop-body">
+                                                                <div class="list-group" data-spy="scroll" data-target="ingredientsContainer" id="ingredientsUpdate" data-offset="0">
+                                                                    <li class="list-group-item">4 small chicken breasts, pounded thin salt and pepper to taste</li>
+                                                                    <li class="list-group-item">4 jalapenos, diced</li>
+                                                                    <li class="list-group-item">4 ounces cream cheese room temperature</li>
+                                                                    <li class="list-group-item">1 cup cheddar cheese, shredded</li>
+                                                                    <li class="list-group-item">8 slices bacon</li>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/4515542dbb.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Zesty Slow Cooker Chicken Barbeque</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/roastchicken2feab.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Roast Chicken</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/cajun0676.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Cajun Chicken Pasta</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/4024225151_5f477f16caabf9.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Chicken Parmigiana</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/205xNxchickenandspinachflautas2296f.jpg.pagespeed.ic.RNEW9wsRU.jpg" alt="Card image cap"
+                                                    id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Baked Chicken and Spinach Flautas</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/5337400468_d5892f3a03_od5cd.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Chicken Tortilla Soup</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/ButternutQuinoaStewSquareSmallbe3b.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Home</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/broccolicf92.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Broccoli Cheese Soup</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/5258969545_eeb0c35356_o7eee.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Chicken and Dumplings</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/9843414ab7.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Slow Cooker Chicken Taco Soup</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/chickenmustarde587.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Chicken with Mustard Cream Sauce</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/1184378c8a.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Yummy Honey Chicken Kabobs</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/532125a2ff.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Braised Balsamic Chicken</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/2334b48b.jpg" alt="Card image cap"
+                                                    id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Baked Honey Mustard Chicken</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/3214830317_3470607769fad0.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Ranch Style Chicken</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/4302390134_8a04478597_oc153.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Homemade Chicken and Noodles</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/Buffalo2BChicken2BChili2B5002B9548b7d71737.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Buffalo Chicken Chili</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/CheddarJalapenoChickenBurgerswithGuacamole4fdb.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Cheddar Jalapeno Chicken Burgers with Guacamole</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/florentineebc6.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Chicken Florentine Pasta</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/chickenalfredoc9c5.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Bowtie Chicken Alfredo</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/porkroastapplese1e2.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Pork Roast with Apples and Onions</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/390_1_1350903747_lrg0b42.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Perfect roast chicken</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/Tequila2BLime2BGrilled2BChicken2BClub2BSandwich2Bwith2BGuacamole2Band2BRoasted2BJalapeno2BMayo2B5002B0617b8b60d15.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Tequila Lime Grilled Chicken Club Sandwich with Guacamole and Roasted
+                                                        Jalapeno Mayo</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/punkin3f44.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Pumpkin Soup</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/bakedchickenc300x2002b69c2e8.jpg" alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Classic Baked Chicken</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/chickentikkamasalac65c.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Pastor Ryan’s Chicken Tikka Masala</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2 mr-sm-0 mr-md-0 mr-lg-2 float-lg-left float-md-none float-sm-none" id="card-width"><img class="card-img-top"
+                                                    src="http://static.food2fork.com/CrockPotPestoRanchChickenThighs1text1300x248ca0b.jpg" alt="Card image cap"
+                                                    id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Crock Pot Pesto Ranch Chicken Thighs</p>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-2" id="card-width"><img class="card-img-top" src="http://static.food2fork.com/464580296.jpg"
+                                                    alt="Card image cap" id="img-width">
+                                                <div class="card-body">
+                                                    <p class="card-text text-center">Roast Sticky Chicken Rotisserie Style</p>
+                                                </div>
+                                            </div> -->
+                                        </div>                                           <!--search result recipe card -->
+                                            <div class="card" id="result-recipe-card">   
+                                                <div class="body">      
+            
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!--favorite recipe display-->
+                        <div class="tab-pane fade" id="v-pills-favorite" role="tabpanel" aria-labelledby="v-pills-favorite-tab">
+    
+                            <div class="card custom-border mb-3">
+                                <div class="card-header text-white font-weight-bold custom-bg">My Favorite</div>
+                                    <div class="card-body text-warning">
+                                        
+                                        <!--favorite recipe card -->
+                                        <div class="card" id="favorite-recipe-card">   
+                                            <div class="body">      
+                
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-pricing" role="tabpanel" aria-labelledby="v-pills-pricing-tab">...</div>
+    
+                        <!--login / signup display-->
+                        <div class="tab-pane fade" id="v-pills-Login" role="tabpanel" aria-labelledby="v-pills-Login-tab">
+                                <div class="card custom-border mb-3">
+                                        <div class="card-header text-white font-weight-bold custom-bg">Login</div>
+                                        <div class="card-body custom-label">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="email-input font-weight-bold">Email address</label>
+                                                    <input type="email" class="form-control custom-border" id="user-email" aria-describedby="emailHelp" placeholder="Enter email">
+                                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="password-input font-weight-bold">Password</label>
+                                                    <input type="password" class="form-control custom-border" id="password" placeholder="Password">
+                                                </div>
+                                                    <button type="submit" class="btn my-2 my-sm-0 font-weight-bold custom-border" id="login-btn">Submit</button>
+                                            </form>
+                                        </div>
+                                </div>
+    
+                                
+                        </div>                    
+                    </div>
+                </div>
+    
+            </div>
+        
+    
+        <!-- FIrebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+        <!--javascript-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./assets/javascript/config.js"></script>
+        <script src="./assets/javascript/login.js"></script>
+        <script src="./assets/javascript/signup.js"></script>
+        <script src="./assets/javascript/call-recipes.js"></script>
+        <script src="./assets/javascript/queryRecipes.js"></script>
+    
+    </body>
+</html>

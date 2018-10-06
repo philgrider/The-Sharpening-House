@@ -1,0 +1,148 @@
+#navigation-buttons{
+    width: 100%;
+    margin-top: -65px;
+}
+
+#page-links{
+    max-width: 50%;
+    margin-left: 15px;
+}
+
+#project-name {
+    width:auto;
+    font-family: 'Bungee Inline', cursive;
+    background-color: #2D2A27;
+    background-image: linear-gradient(rgba(54, 54, 54, 0.7), rgba(54, 54, 54, 0.7)), url("../images/veggie-dark.jpeg");
+    background-size: 120%;
+    background-position-y: 65%;
+    background-position: center;
+    color: orangered;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+#search-fields {
+    margin: auto;
+}
+
+.custom-border {
+    border-color: orangered;
+}
+
+.custom-bg,
+#hamburger,
+#login-cog{
+    background-color: orangered;
+}
+
+#hamburger{
+    margin-top:30px;
+}
+
+.hide{
+    display:none;
+}
+
+/* #login-logout{
+    position: relative;
+    text-align: right;
+} */
+
+#search-input-btn:hover,
+#random-result-btn:hover,
+#submit-login-btn:hover,
+#submit-signup-btn:hover {
+    background-color: orangered;
+    color: white;
+}
+
+#search-input-btn,
+#random-result-btn,
+#submit-login-btn,
+#submit-signup-btn {
+    color: orangered;
+    background-color: white;
+}
+
+a,
+h5 {
+    color: orangered;
+}
+
+h4 {
+    color: orangered;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+a:hover{
+    color: orangered;
+    font-weight: bolder;
+}
+
+#user-email-addon,
+#password-addon {
+    color: white;
+    background-color: orangered;
+}
+
+.small-help{
+    float: right;
+    text-align:right;
+    font-size: 12px;
+    color: red;
+}
+
+#recipe-query-results {
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+
+
+#card-width{
+    width: 290px;
+    height: 290px;
+    border-color: orangered;
+    margin: auto;
+}
+
+#img-width{
+    width: 288px;
+    height: 190px;
+    text-align: left;
+}
+
+@media screen and (max-width: 640px) {
+
+    #search-input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #random-result-btn {
+        max-width: 285px;
+    }
+}
+
+/* Responsive styling for header text */
+@media screen and (max-width:574px){
+    .display-4{
+        font-size:2.5rem;
+    }
+}
+
+@media screen and (min-width:575px){
+    .display-4{
+        font-size:3rem;
+    }
+}
+
+
+
+
+
+

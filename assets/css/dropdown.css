@@ -80,3 +80,9 @@
     -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.05s, opacity 0s;
     transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.05s, opacity 0s;
   }
+
+  .twillio-button{
+    font-size: 12px;
+    background-color: orangered;
+    color:white;
+  }

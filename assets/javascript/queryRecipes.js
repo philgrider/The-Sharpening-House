@@ -43,8 +43,13 @@ function updateDOM (recipes) {
         });
         var $cardBodyContainer = $('<div>').addClass('card-body');
         var $pCard = $('<p>').addClass('card-text text-center').text(recipeDataStore.recipes[i].title);
+        //create "dropdown" view
         var $recipeDrop = $('<div>').addClass('drop-container');
-        $recipeDrop.append($('<span>').addClass('button').attr({'id':'drop-button','data-recipe-id': recipeDataStore.recipes[i].recipe_id}).text('+'));
+        //add contents of "dropdown"
+        //toggle button
+        $recipeDrop.append($('<span>').addClass('button')
+        .attr({'id':'drop-button','data-recipe-id': recipeDataStore.recipes[i].recipe_id}).text('+'));
+        //ingredients display
         var $ingredientsDiv = $('<div>').addClass('drop-content');
         $ingredientsDiv.append($('<div>').addClass('drop-head').html('<h3>' + recipeDataStore.recipes[i].title + '</h3>'));
         var $dropBody = $('<div>').addClass('drop-body');
@@ -54,6 +59,10 @@ function updateDOM (recipes) {
                     'id': recipeDataStore.recipes[i].recipe_id,
                     'data-offset': '0'
         }));
+        var $twillioButton = $('<button>').attr('id','twillio-button');
+        $twillioButton.text('Text Me');
+
+        $dropBody.append($twillioButton);
         $ingredientsDiv.append($dropBody);
         $recipeDrop.append($ingredientsDiv);
         $cardBodyContainer.append($pCard);
@@ -99,3 +108,4 @@ function updateDOM (recipes) {
 
   };
 //   getRecipe('35120', updateDOM2);
+

@@ -9,11 +9,13 @@
 }
 
 #project-name {
+    width:auto;
     font-family: 'Bungee Inline', cursive;
-    background-color: black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/dinner-dish-egg-54455_bg.jpg");
+    background-color: #2D2A27;
+    background-image: linear-gradient(rgba(54, 54, 54, 0.7), rgba(54, 54, 54, 0.7)), url("../images/veggie-dark.jpeg");
+    background-size: 120%;
+    background-position-y: 65%;
     background-position: center;
-    background-size:100% 100%;
     color: orangered;
 }
 
@@ -35,7 +37,11 @@ button {
     background-color: orangered;
 }
 
-.login-display{
+#hamburger{
+    margin-top:30px;
+}
+
+.hide{
     display:none;
 }
 
@@ -65,6 +71,12 @@ h5 {
     color: orangered;
 }
 
+h4 {
+    color: orangered;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
 a:hover{
     color: orangered;
     font-weight: bolder;
@@ -83,17 +95,25 @@ a:hover{
     color: red;
 }
 
-.small-help{
-    text-align:right;
-    font-size: 12px;
+#recipe-query-results {
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
+
+
+
 #card-width{
     width: 290px;
     height: 290px;
+    border-color: orangered;
+    margin: auto;
 }
+
 #img-width{
-    width: 290px;
+    width: 288px;
     height: 190px;
+    text-align: left;
 }
 
 @media screen and (max-width: 640px) {
@@ -104,7 +124,25 @@ a:hover{
     }
 
     #random-result-btn {
-        width: 285px;
+        max-width: 285px;
     }
 }
+
+/* Responsive styling for header text */
+@media screen and (max-width:574px){
+    .display-4{
+        font-size:2.5rem;
+    }
+}
+
+@media screen and (min-width:575px){
+    .display-4{
+        font-size:3rem;
+    }
+}
+
+
+
+
+
 

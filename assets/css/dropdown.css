@@ -16,7 +16,7 @@
     /* left: 7px; */
     right: 0;
     /* top: 5vh; */
-    background-color: #03A9F4;
+    background-color: orangered;
     border-radius: 50%;
     width: 30px;
     max-width: 30px;
@@ -41,7 +41,11 @@
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s;
   }
   
-  .drop-content .drop-head { padding: 0 0 20px 0; }
+  .drop-content .drop-head { 
+    padding: 0 0 20px 0;
+    color: white;
+    font-weight: bold; 
+  }
   
   .drop-content .drop-body {
     color: #000;
@@ -53,6 +57,7 @@
     padding: 10px 0;
     box-sizing: border-box;
   }
+
   .button.expand {
     -webkit-transform: rotate(585deg);
     -ms-transform: rotate(585deg);
@@ -81,8 +86,22 @@
     transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.05s, opacity 0s;
   }
 
-  .twillio-button{
+  .list-group {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #twillio-button{
+    margin: 5px 0 5px 10px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5%;
     font-size: 12px;
+    background-color: white;
+    color:orangered;
+    font-weight: bold;
+  }
+
+  #twillio-button:hover {
     background-color: orangered;
-    color:white;
+    color: white;
+    font-weight: bold;
   }

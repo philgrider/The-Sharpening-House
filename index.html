@@ -37,16 +37,16 @@
                 <!-- Links -->
                 <ul class="list-unstyled components">
                     <li class="active" id="home-link">
-                        <a href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <a href="index.html" class="navlink">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li>
-                        <a href="login.html" class="logout-display" data-izimodal-open="#login-modal" data-izimodal-transitionin="fadeInDown">login</a>
+                        <a href="login.html" class="logout-display navlink" data-izimodal-open="#login-modal" data-izimodal-transitionin="fadeInDown">login</a>
                     </li>
                     <li>
-                        <a href="signup.html" class="logout-display" data-izimodal-open="#signup-modal" data-izimodal-transitionin="fadeInDown">sign up</a>
+                        <a href="signup.html" class="logout-display navlink" data-izimodal-open="#signup-modal" data-izimodal-transitionin="fadeInDown">sign up</a>
                     </li>
                     <li>
-                        <a id="logout-link" class="login-display hide">logout</a>
+                        <a id="logout-link" class="login-display hide navlink">logout</a>
                     </li>
                 </ul>
 
@@ -71,32 +71,32 @@
 
 
     <!--Page Content-->
-    <div class="container">
+    <div class="container" id="main-content">        
 
         <!--home page display search form & random result button-->
-        <div class="container col-9">
+        <div class="container">
                             
             <div class="card">
                 
                 <!--search input and random recipe button-->                
                 <div class="card-header">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2 custom-border" id="search-input" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn my-2 my-sm-0 mr-2 font-weight-bold custom-border" id="search-input-btn" type="submit">Search</button>
-                            <button class="btn my-2 my-sm-0 font-weight-bold custom-border" id="random-result-btn" type="submit">Surprise Me</button>                                        
-                    </form>
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2 custom-border" id="search-input" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn my-2 my-sm-0 mr-2 font-weight-bold custom-border" id="search-input-btn" type="submit">Search</button>
+                                <button class="btn my-2 my-sm-0 font-weight-bold custom-border" id="random-result-btn" type="submit">Surprise Me</button>                                        
+                        </form>
                 </div>
                                 
                 <!--search result display-->
                 <div class="card-body" id="recipe-query-results">                                    
-                    <!--<h5 class="card-title font-weight-bold">Featured Dish</h5>-->
+     
                                         
 
                 </div>
 
             </div>
             
-        </div>
+        </div>      
 
     </div>
 

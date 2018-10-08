@@ -19,7 +19,7 @@
         console.log('Chicken Recipies', (recipeDataStore));
         var $headerResults = $('<h4>')
             .addClass('text-center border-bottom')
-            .text('Your Results!');
+            .text('Recipes just for You');
         //create the Search Resuls
         $recipesDisplay.append($headerResults);
         console.log($recipesDisplay);
@@ -58,7 +58,7 @@
                 'id': recipeDataStore.recipes[i].recipe_id,
                 'data-offset': '0'
             }));
-            var $twillioButton = $('<button>').attr('class','twillio-button');
+            var $twillioButton = $('<button>').attr('id','twillio-button');
             $twillioButton.text('Text Me');
     
             $dropBody.append($twillioButton);

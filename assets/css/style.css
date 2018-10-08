@@ -1,3 +1,4 @@
+
 #navigation-buttons{
     width: 100%;
     margin-top: -65px;
@@ -23,6 +24,10 @@ button {
     font-family: 'Roboto', sans-serif;
 }
 
+#search-input{
+    min-width: 400px;
+    margin:auto;
+}
 #search-fields {
     margin: auto;
 }
@@ -42,19 +47,21 @@ button {
     color: white;
 }
 
+#hamburger:focus{
+    outline-color: white;
+}
+
 .hide{
     display:none;
+}
+
+.navlink:hover{
+    text-decoration: none;
 }
 
 .container .col-6 {
     max-width: 100%;;
 }
-
-
-/* #login-logout{
-    position: relative;
-    text-align: right;
-} */
 
 #search-input-btn:hover,
 #random-result-btn:hover,
@@ -109,12 +116,16 @@ a:hover{
     font-size: 18px;
 }
 
-/* .col-6 {
-    max-width: 100%;
-} */
-
 .card-header .form-inline {
     margin-bottom: 0px;
+}
+
+.card-header {
+    background-color: #f2efeb;
+}
+
+.card-body{
+    max-width: 100%;
 }
 
 #card-width{
@@ -135,11 +146,20 @@ a:hover{
     #search-input {
         margin-top: 10px;
         margin-bottom: 10px;
+        min-width: 200px;
     }
 
     #random-result-btn {
         max-width: 285px;
     }
+}
+
+@media screen and (min-width: 986px) {
+
+    #search-input {
+        min-width: 650px;
+    }
+
 }
 
 /* Responsive styling for header text */
@@ -154,3 +174,6 @@ a:hover{
         font-size:3rem;
     }
 }
+
+/*Responsive styling for main container div*/
+

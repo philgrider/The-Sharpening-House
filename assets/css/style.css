@@ -47,6 +47,7 @@ button {
     color: white;
 }
 
+#twillio-button:focus,
 #hamburger:focus{
     outline-color: white;
 }
@@ -122,6 +123,10 @@ a:hover{
 
 .card-header {
     background-color: #f2efeb;
+}
+
+.custom-bg{
+    background-color: orange;
 }
 
 .card-body{

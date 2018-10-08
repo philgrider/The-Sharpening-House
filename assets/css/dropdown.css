@@ -16,7 +16,7 @@
   /* left: 7px; */
   right: 0;
   /* top: 5vh; */
-  background-color: orangered;
+  background-color: orange;
   border-radius: 50%;
   width: 30px;
   max-width: 30px;
@@ -93,10 +93,11 @@
 }
 
 #twillio-button{
-  margin: 5px 0 5px 10px;
+  width:100px;
+  margin: 5px 0 5px 90px;
+  border:none;
   font-family: 'Roboto', sans-serif;
-  border-radius: 5%;
-  font-size: 12px;
+  font-size: 14px;
   background-color: white;
   color:orangered;
   font-weight: bold;

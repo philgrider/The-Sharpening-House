@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">   
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/dropdown.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
 </head>
 <body>
     <!-- header -->
@@ -21,6 +22,8 @@
                 <!-- hamburger nav button -->
                 <button class="navbar-toggler" type="button" id="hamburger" data-toggle="collapse" data-target="#page-links" aria-controls="#page-links"
                 aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars fa-1x"></i></button>
+
+                <h6 id="current-user"></h6>
 
                 <!-- login/logout (to be added later-->
                 <!-- <button type="button" class="navbar-toggler" id = "login-cog" data-toggle="collapse" data-target="#login-logout" aria-controls="#login-logout" aria-expanded="false" aria-label="toggle sign in">
@@ -37,10 +40,10 @@
                         <a href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li>
-                        <a href="login.html" class="logout-display">login</a>
+                        <a href="login.html" class="logout-display" data-izimodal-open="#login-modal" data-izimodal-transitionin="fadeInDown">login</a>
                     </li>
                     <li>
-                        <a href="signup.html" class="logout-display">sign up</a>
+                        <a href="signup.html" class="logout-display" data-izimodal-open="#signup-modal" data-izimodal-transitionin="fadeInDown">sign up</a>
                     </li>
                     <li>
                         <a id="logout-link" class="login-display hide">logout</a>
@@ -73,10 +76,10 @@
         <!--home page display search form & random result button-->
         <div class="container col-9">
                             
-            <div class="card custom-border mb-3">
+            <div class="card">
                 
                 <!--search input and random recipe button-->                
-                <div class="card-header" id="search-fields">
+                <div class="card-header">
                     <form class="form-inline">
                         <input class="form-control mr-sm-2 custom-border" id="search-input" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn my-2 my-sm-0 mr-2 font-weight-bold custom-border" id="search-input-btn" type="submit">Search</button>
@@ -97,6 +100,87 @@
 
     </div>
 
+    <!-- Login Modal-->
+    <div id="login-modal" class="hide"> 
+        <div class="container">
+            <div class="col-6 container">
+                <div class="card custom-border mb-3" id="login-card">
+                    <div class="card-header custom-bg">
+                        <h3 class="card-title text-white">Login</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text custom-border" id="user-email-addon"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control custom-border" placeholder="User Email" id="user-email">
+                            </div>
+                        </div>            
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text custom-border" id="password-addon"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" class="form-control custom-border" placeholder="Password" id="password">
+                            </div>
+                        </div>    
+                        <div class="form-group">
+                            <span>
+                                <button type="submit" class="btn my-2 my-sm-0 mr-2 font-weight-bold custom-border" id="submit-login-btn">Login</button>
+                                <!-- <a href="signup.html"><span class="small-help">Don't have an account? Sign up!</span></a> -->
+                            </span>            
+                            <span id="error-message"></span>          
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <!--Signup Modal-->
+    <div id="signup-modal" class="hide">
+        <div class="container">
+                <div class="col-6 container">
+                <div class="card custom-border mb-3" id="signup-card">
+                    <div class="card-header custom-bg">
+                        <h3 class="card-title text-white">Sign Up</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text custom-border" id="user-email-addon"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control custom-border" placeholder="User Email" id="signup-user-email">
+                            </div>
+                        </div>            
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text custom-border" id="password-addon"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" class="form-control custom-border" placeholder="Password" id="signup-password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text custom-border" id="password-addon"><i class="fas fa-phone"></i></span>
+                                </div>
+                                <input type="text" class="form-control custom-border" placeholder="Phone Number" id="signup-phone-number">
+                            </div>
+                        </div>      
+                        <div class="form-group">
+                            <button type="submit" class="btn my-2 my-sm-0 mr-2 font-weight-bold custom-border" id="submit-signup-btn">Sign Up</button>
+                            <span id="error-message"></span>           
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    
     <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
     <!--javascript-->
@@ -106,7 +190,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./assets/javascript/config.js"></script>
     <script src="./assets/javascript/main.js"></script>
+    <script src="assets/javascript/login.js"></script>
+    <script src="assets/javascript/signup.js"></script>
     <script src="./assets/javascript/call-recipes.js"></script>
     <script src="./assets/javascript/queryRecipes.js"></script>
+    <script src="assets/javascript/twilio.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js" type="text/javascript"></script>
+
 </body>
 </html>

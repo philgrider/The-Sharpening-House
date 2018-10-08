@@ -1,14 +1,16 @@
 $(document).ready(function() {
 
     // Get DOM Elements
-    var $userEmail = $('#user-email');
-    var $userPass = $('#password');
+    var $userEmail = $('#signup-user-email');
+    var $userPass = $('#signup-password');
     var $submitBtn = $('#submit-signup-btn');
     var $errorMsg = $('#error-message');
-    var $phoneNumber = $('#phone-number');
+    var $phoneNumber = $('#signup-phone-number');
 
     // Create on click event listener for submit button
     $submitBtn.on('click', function(event) {
+
+        console.log('click');
 
         // Prevents page from reloading
         event.preventDefault();

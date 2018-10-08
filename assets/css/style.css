@@ -16,7 +16,7 @@
     background-size: 120%;
     background-position-y: 65%;
     background-position: center;
-    color: orangered;
+    color: orange;
 }
 
 button {
@@ -28,13 +28,13 @@ button {
 }
 
 .custom-border {
-    border-color: orangered;
+    border-color: orange;
 }
 
 .custom-bg,
 #hamburger,
 #login-cog{
-    background-color: orangered;
+    background-color: orange;
 }
 
 #hamburger{
@@ -46,6 +46,11 @@ button {
     display:none;
 }
 
+.container .col-6 {
+    max-width: 100%;;
+}
+
+
 /* #login-logout{
     position: relative;
     text-align: right;
@@ -55,7 +60,7 @@ button {
 #random-result-btn:hover,
 #submit-login-btn:hover,
 #submit-signup-btn:hover {
-    background-color: orangered;
+    background-color: orange;
     color: white;
 }
 
@@ -63,23 +68,23 @@ button {
 #random-result-btn,
 #submit-login-btn,
 #submit-signup-btn {
-    color: orangered;
+    color: orange;
     background-color: white;
 }
 
 a,
 h5 {
-    color: orangered;
+    color: orange;
 }
 
 h4 {
-    color: orangered;
+    color: orange;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
 a:hover{
-    color: orangered;
+    color: orange;
     font-weight: bolder;
 }
 
@@ -87,7 +92,7 @@ a:hover{
 #password-addon,
 #phone-addon {
     color: white;
-    background-color: orangered;
+    background-color: orange;
 }
 
 .small-help{
@@ -104,10 +109,18 @@ a:hover{
     font-size: 18px;
 }
 
+/* .col-6 {
+    max-width: 100%;
+} */
+
+.card-header .form-inline {
+    margin-bottom: 0px;
+}
+
 #card-width{
     width: 290px;
     height: 290px;
-    border-color: orangered;
+    border-color: orange;
     margin: auto;
 }
 
@@ -141,9 +154,3 @@ a:hover{
         font-size:3rem;
     }
 }
-
-
-
-
-
-

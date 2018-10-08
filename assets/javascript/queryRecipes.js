@@ -58,7 +58,7 @@
                 'id': recipeDataStore.recipes[i].recipe_id,
                 'data-offset': '0'
             }));
-            var $twillioButton = $('<button>').attr('id','twillio-button');
+            var $twillioButton = $('<button>').attr('class','twillio-button');
             $twillioButton.text('Text Me');
     
             $dropBody.append($twillioButton);

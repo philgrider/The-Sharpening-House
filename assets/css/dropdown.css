@@ -28,7 +28,18 @@
   -webkit-transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
   transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
 }
-  
+.drop-container-text {
+  position: absolute;
+  margin: auto;
+  right: 10px;
+  border-radius: 50%;
+  width: 120px;
+  max-width: 120px;
+  height: 25px;
+  font-size: smaller;
+  bottom: 0px;
+  text-align: center;
+}  
 .drop-content {
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);
@@ -92,9 +103,9 @@
   font-family: 'Roboto', sans-serif;
 }
 
-#twillio-button{
+#twilio-button{
   width:100px;
-  margin: 5px 0 5px 90px;
+  margin: 3px 2px 5px 12px;
   border:none;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -103,7 +114,24 @@
   font-weight: bold;
 }
 
-#twillio-button:hover {
+#twilio-button:hover {
+  background-color: orangered;
+  color: white;
+  font-weight: bold;
+}
+#url-button{
+  width:100px;
+  margin: 10px 2px 5px 45px;
+  padding: 3px 2px 5px 4px;
+  border:none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  background-color: white;
+  color:orangered;
+  font-weight: bold;
+}
+
+#url-button:hover {
   background-color: orangered;
   color: white;
   font-weight: bold;

@@ -1,3 +1,24 @@
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+a,
+h5 {
+    color: orange;
+}
+
+h4 {
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* Navigation and Header Styles */
+a:hover{
+    color: orange;
+    font-weight: bolder;
+}
 
 #navigation-buttons{
     width: 100%;
@@ -7,6 +28,19 @@
 #page-links{
     max-width: 50%;
     margin-left: 15px;
+}
+
+#hamburger{
+    background-color: orange;
+}
+
+#hamburger{
+    margin-top:30px;
+    color: white;
+}
+
+.hide{
+    display:none;
 }
 
 #project-name {
@@ -20,48 +54,15 @@
     color: orange;
 }
 
-button {
-    font-family: 'Roboto', sans-serif;
-}
 
+/* Main Content div and Search styles */
 #search-input{
     min-width: 400px;
     margin:auto;
 }
+
 #search-fields {
     margin: auto;
-}
-
-.custom-border {
-    border-color: orange;
-}
-
-.custom-bg,
-#hamburger,
-#login-cog{
-    background-color: orange;
-}
-
-#hamburger{
-    margin-top:30px;
-    color: white;
-}
-
-#twillio-button:focus,
-#hamburger:focus{
-    outline-color: white;
-}
-
-.hide{
-    display:none;
-}
-
-.navlink:hover{
-    text-decoration: none;
-}
-
-.container .col-6 {
-    max-width: 100%;;
 }
 
 #search-input-btn:hover,
@@ -80,37 +81,8 @@ button {
     background-color: white;
 }
 
-a,
-h5 {
-    color: orange;
-}
 
-h4 {
-    color: orange;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-a:hover{
-    color: orange;
-    font-weight: bolder;
-}
-
-#user-email-addon,
-#password-addon,
-#phone-addon {
-    color: white;
-    background-color: orange;
-}
-
-.small-help{
-    float: right;
-    text-align:right;
-    font-size: 12px;
-    color: red;
-    margin-top: 5px;
-}
-
+/* Recipe Card & general card styles */
 #recipe-query-results {
     margin: auto;
     font-family: 'Roboto', sans-serif;
@@ -146,6 +118,49 @@ a:hover{
     text-align: left;
 }
 
+
+/* login/signup styling */
+#user-email-addon,
+#password-addon,
+#phone-addon {
+    color: white;
+    background-color: orange;
+}
+
+.small-help{
+    float: right;
+    text-align:right;
+    font-size: 12px;
+    color: red;
+    margin-top: 5px;
+}
+
+
+/* Misc. Corrective Classes */
+.custom-border {
+    border-color: orange;
+}
+
+.custom-bg,{
+    background-color: orange;
+}
+
+#twillio-button:focus,
+#hamburger:focus{
+    outline-color: white;
+}
+
+.navlink:hover{
+    text-decoration: none;
+}
+
+/* ??? */
+.container .col-6 {
+    max-width: 100%;;
+}
+
+
+/* Media Queries */
 @media screen and (max-width: 767px) {
 
     #search-input {

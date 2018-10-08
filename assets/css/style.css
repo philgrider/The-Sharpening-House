@@ -145,8 +145,9 @@ a:hover{
     background-color: orange;
 }
 
-#twillio-button:focus,
-#hamburger:focus{
+#twilio-button:focus,
+#hamburger,
+#url-button:focus{
     outline-color: white;
 }
 

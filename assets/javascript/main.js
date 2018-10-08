@@ -96,14 +96,14 @@ $(document).ready(function () {
     });
 
     // Setup event listner for the twilio button
-    $('.card').on('click', '.twilio-button', function() {
+    $('#recipe-query-results').on('click', '#twilio-button', function() {
         console.log('twilio!');
         var userId = firebase.auth().currentUser.uid;
         var database = firebase.database().ref('/users/' + userId);
 
         database.once('value').then( function(snapshot) {
             var phoneNumber = snapshot.val().phoneNumber;
-            var bodyMessage = 'hey';
+            var bodyMessage = textDataStore;
             console.log(phoneNumber);
             sendSMS(phoneNumber, bodyMessage);
         });

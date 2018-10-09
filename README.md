@@ -18,7 +18,7 @@
 - Food2Fork API
 - Twilio API
 - Izimodal.js
-- Animation.css
+- Animate.css
 - Popper.js
 - JQuery
 - JavaScript

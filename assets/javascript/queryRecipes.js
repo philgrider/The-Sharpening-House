@@ -62,8 +62,6 @@
 
                 // Build out the individual recipe container popup
             var $recipeDrop = $('<div>').addClass('drop-container');
-            var $recipeIngredientsText = $('<div>').addClass('drop-container-text')
-                                                   .text('Ingredients');
             
             //Build ingredients expand Button
             $recipeDrop.append($('<span>').addClass('button')
@@ -102,7 +100,7 @@
             $dropBody.append($twilioButton, $directionsButton);
             $ingredientsDiv.append($dropBody);
             $recipeDrop.append($ingredientsDiv);
-            $cardBodyContainer.append($pCard, $recipeIngredientsText);
+            $cardBodyContainer.append($pCard);
             $cardDiv.append($cardImg, $cardBodyContainer, $recipeDrop);
             $recipesDisplay.append($cardDiv);
         }

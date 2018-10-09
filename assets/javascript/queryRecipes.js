@@ -88,13 +88,13 @@
                             'data-offset': '0'
             }));
 
-                //Add text buttons to bottom of Recipes
+            //Add text buttons to bottom of Recipes
             var $twilioButton = $('<button>').attr('id','twilio-button').text('Text Me');
-            var $directionsButton = $('<a>').attr({
+            var $directionsButton = $('<button>').attr({
                                     'href':recipeDataStore.recipes[i].source_url,
                                     'target': '_blank',
                                     'id': 'url-button'})
-                                    .text('Recipe Directions');
+                                    .text('Directions');
 
             //appends all elements into the DOM
             $dropBody.append($twilioButton, $directionsButton);

@@ -130,6 +130,10 @@
   font-weight: bold;
 }
 
+#url-button:all{
+  color:orangered;
+}
+
 #url-button:hover {
   background-color: orangered;
   color: white;

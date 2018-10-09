@@ -90,11 +90,11 @@
 
             //Add text buttons to bottom of Recipes
             var $twilioButton = $('<button>').attr('id','twilio-button').text('Text Me');
-            var $directionsButton = $('<button>').attr({
+            var $directionsButton = $('<button>').append($('<a>').attr({
                                     'href':recipeDataStore.recipes[i].source_url,
-                                    'target': '_blank',
-                                    'id': 'url-button'})
-                                    .text('Directions');
+                                    'target': '_blank'})
+                                    .text('Directions'));
+            $directionsButton.attr('id', 'url-button');
 
             //appends all elements into the DOM
             $dropBody.append($twilioButton, $directionsButton);

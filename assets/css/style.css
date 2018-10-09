@@ -135,6 +135,10 @@ a:hover{
     margin-top: 5px;
 }
 
+.container .col-6 {
+    max-width: 100%;;
+}
+
 
 /* Misc. Corrective Classes */
 .custom-border {
@@ -155,11 +159,9 @@ a:hover{
     text-decoration: none;
 }
 
-/* ??? */
-.container .col-6 {
-    max-width: 100%;;
+button a{
+    color: orangered;
 }
-
 
 /* Media Queries */
 @media screen and (max-width: 767px) {

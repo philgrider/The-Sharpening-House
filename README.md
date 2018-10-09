@@ -1,6 +1,6 @@
 # Dish Set Go
 
-## Live Demo: https://kluu1.github.io/The-Sharpening-House/
+## Live Demo: https://kluu1.github.io/The-Sharpening-House/splash.html
 
 ## Project Description (MVP)
 - This application will allow users to search for recipes by keywords and/or ingredients

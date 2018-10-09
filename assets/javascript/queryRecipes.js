@@ -17,7 +17,7 @@
     });
     function updateDOM(recipes) {
 
-        //Convert recipes into JSON object
+        //Convert recipes into javascript object
         recipeDataStore = JSON.parse(recipes);
 
         //Clear recipe container so we can load new recipes

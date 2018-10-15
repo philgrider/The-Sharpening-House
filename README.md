@@ -24,3 +24,7 @@
 - JavaScript
 - HTML5/CSS3
 - Bootstrap
+- Firebase
+
+## Team members
+- Barbara Hernandez, Kevin Luu, Phillip Grider, Vita Chen
